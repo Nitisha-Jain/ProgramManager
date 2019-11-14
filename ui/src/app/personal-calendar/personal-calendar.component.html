@@ -1,0 +1,11 @@
+
+<div style="margin-left: 10px">
+    {{productName}}
+
+</div>
+<dx-scheduler [dataSource]="schedulerDataSource" [views]='["month","week","day"]' currentView="month" [currentDate]="currentDate"
+    [height]="800" (onAppointmentFormOpening)="onAppointmentFormOpening($event)">
+
+</dx-scheduler>
+<button mat-fab color="primary" class="floating-button" (click)="showAppointmentPopup($event)"><i
+        class="dx-icon-plus"></i></button>

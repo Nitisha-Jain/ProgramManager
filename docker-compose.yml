@@ -1,0 +1,26 @@
+version: '3'
+services:
+  angular-ui:
+   build: ui
+   ports:
+     - 4200:4200
+   container_name: angularcontainer  # Container name
+  
+  
+  spring-boot-command-framework:
+    build: api
+    ports:
+      - 8080:8080
+    environment:
+      mongo_url: mongodb://mongo-command/mydb
+
+  mongo-command:
+    image: mongo
+    container_name: mongo
+    environment:
+      - MONGO_DATA_DIR=/data/mydb
+    ports:
+      - 27017:27017
+    volumes:
+      - $HOME/workspace/productdb/mydb:/data/db
+

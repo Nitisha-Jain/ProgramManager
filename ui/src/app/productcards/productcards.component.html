@@ -1,0 +1,51 @@
+<div class="productCards">
+    <mat-card class="example-card">
+
+        <div class="avatar">
+            <div>
+                <ngx-avatar size="35" name={{data.productName}} (click)="openCalendar(data)"></ngx-avatar>
+            </div>
+            <div>
+                <span style="font-family: 'Oleo Script', cursive;
+                ;font-size: 1.5em;margin-left: 10px">
+                    {{data.productName}} </span>
+            </div>
+            <div>
+                <button mat-icon-button (click)=editData() class="card">
+                    <mat-icon class="editicon">edit</mat-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- <img mat-card-image src={{randomItem}} alt="product" (click)="openCalendar(data)"> -->
+        <mat-card-actions>
+            <div style="margin-top: 10px">
+                <!-- commented part <mat-accordion>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                        </mat-expansion-panel-header>
+                        {{data.durationWeek}}
+                        <br>
+                        {{data.durationDays}}
+                        <br>
+                        <div *ngFor="let agenda of data.agenda">
+                            {{agenda}}
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion> -->
+                <div *ngFor="let agenda of data.agenda">
+                    {{agenda}}
+                </div>
+
+                Created At: {{data.createdAt|date}}
+
+            </div>
+            <div>
+                <button mat-icon-button (click)=deleteData(data)>
+                    <mat-icon class="edit">delete</mat-icon>
+                </button>
+            </div>
+        </mat-card-actions>
+
+    </mat-card>
+</div>

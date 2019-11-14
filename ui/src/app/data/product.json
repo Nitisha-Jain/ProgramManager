@@ -1,0 +1,79 @@
+{
+  "productData": [
+    {
+      "productName": "Immersive",
+      "durationWeek": "12",
+      "durationDays": "0",
+      "durationHours": "0",
+      "createdAt": "2019-09-24T11:42:52.800Z",
+      "assignee": "4",
+      "agenda": [
+        "To Study HTML",
+        "To Study CSS"
+      ],
+      "id": 1
+    },
+    {
+      "productName": "OnePlus",
+      "durationWeek": "23",
+      "durationDays": "34",
+      "durationHours": "34",
+      "createdAt": "2019-09-24T11:45:49.483Z",
+      "assignee": "34",
+      "agenda": [
+        " n b,m"
+      ],
+      "id": 2
+    },
+    {
+      "productName": "Nutrella",
+      "durationWeek": "23",
+      "durationDays": "34",
+      "durationHours": "4",
+      "createdAt": "2019-09-24T11:47:29.159Z",
+      "assignee": "3",
+      "agenda": [
+        "vxhvchjx",
+        "bvhbvjbkj"
+      ],
+      "id": 3
+    },
+    {
+      "productName": "Camlin",
+      "durationWeek": "14",
+      "durationDays": "3",
+      "durationHours": "1",
+      "createdAt": "2019-09-24T23:55:45.517Z",
+      "assignee": "23",
+      "agenda": [
+        "Smooth Handwriting",
+        "Extra Dark"
+      ],
+      "id": 4
+    },
+    {
+      "productName": "vfsvfsv",
+      "durationWeek": "32",
+      "durationDays": "45",
+      "durationHours": "45",
+      "createdAt": "2019-09-25T00:34:31.116Z",
+      "assignee": "4",
+      "agenda": [
+        "vdfvs"
+      ],
+      "id": 5
+    },
+    {
+      "productName": "cdvc",
+      "durationWeek": "4",
+      "durationDays": "4",
+      "durationHours": "3",
+      "createdAt": "2019-09-25T00:58:47.267Z",
+      "assignee": "34",
+      "agenda": [
+        ""
+      ],
+      "id": 6
+    }
+  ]
+}

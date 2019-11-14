@@ -1,0 +1,29 @@
+<<<<<<< HEAD
+<dx-scheduler
+[dataSource]="schedulerDataSource"
+    
+    [views]='["week","day"]'
+=======
+
+<dx-scheduler
+[dataSource]="schedulerDataSource"
+    
+    [views]='["month","week","day"]'
+>>>>>>> c13d9b68a0210ac82cc38714d27fdd302fa28707
+    currentView="day"
+  
+    [currentDate]="currentDate"
+    [height]="800"
+<<<<<<< HEAD
+    >
+   
+</dx-scheduler>
+=======
+   
+    (onAppointmentFormOpening)="onAppointmentFormOpening($event)" 
+    >
+   
+</dx-scheduler>
+<button mat-fab color="primary" class="floating-button" (click)="showAppointmentPopup($event)"><i class="dx-icon-plus"></i></button>
+
+>>>>>>> c13d9b68a0210ac82cc38714d27fdd302fa28707

@@ -1,0 +1,84 @@
+<mat-icon (click)="Close()" class="closeDailog">close</mat-icon>
+
+<div class="form">
+    <form class="formGroup" [formGroup]="productInformation" (ngSubmit)="onSubmit()">
+        <mat-form-field floatLabel="auto" appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <mat-error>Enter maximum 25 characters</mat-error>
+            <input matInput required formControlName="productName" />
+        </mat-form-field>
+        <!-- <input required formControlName="productName" placeholder="Product Name" class="input" /> -->
+
+        <div formArrayName="agenda">
+            <label class="agenda">Agenda</label>
+
+            <div *ngFor="let d of agenda.controls; let i=index">
+                <textarea class="text" [formControlName]="i" [name]="'input' + i" [id]="'input' + i"></textarea>
+            </div>
+
+        </div>
+
+        <!-- <div formArrayName="agenda" class="description">
+        <label class="agenda">Agenda</label>
+        <div class="desc" *ngFor="let d of agenda.controls; let i=index">
+            <div>
+                <input class="input" type="text"  [formControlName]="i" [name]="'input' + i" 
+                [id]="'input' + i" (keyup.enter)="onEnter()"
+               placeholder="Press Enter to add Agenda list" />
+               <div>
+                <mat-icon (click)="onEnter()">add</mat-icon> -->
+
+        <!-- </div>
+
+            </div>
+            <div style="margin-top: 10px">
+            
+                    <mat-icon (click)="remove(i)">close</mat-icon>
+    
+
+            </div>
+        </div>
+
+    </div> -->
+        <div class="duration">
+            <div>
+                <mat-form-field floatLabel="auto" appearance="outline">
+                    <mat-label>No. of weeks</mat-label>
+                    <input matInput required formControlName="durationWeek" />
+                    <mat-error>Enter numbers in range : 1 to 124</mat-error>
+                </mat-form-field>
+
+            </div>
+            <div>
+                <mat-form-field floatLabel="auto" appearance="outline">
+                    <mat-label>No. of Working days </mat-label>
+                    <input matInput required formControlName="durationDays" />
+                    <mat-error>Enter numbers in range : 1 to 7</mat-error>
+                </mat-form-field>
+
+            </div>
+
+            <div>
+                <mat-form-field floatLabel="auto" appearance="outline">
+                    <mat-label>No. of Working hours </mat-label>
+                    <input matInput required formControlName="durationHours" />
+                    <mat-error>Enter numbers in range : 1 - 24</mat-error>
+                </mat-form-field>
+
+            </div>
+
+        </div>
+
+        <mat-form-field floatLabel="auto" appearance="outline">
+            <mat-label>No. of assignee</mat-label>
+            <input matInput required formControlName="assignee" />
+            <mat-error>Enter numbers in range: 1 - 15 </mat-error>
+        </mat-form-field>
+
+        <div>
+            <button mat-raised-button color="primary" class="button-flex"
+                [disabled]="productInformation.status==='INVALID'" type="submit">Save</button>
+        </div>
+
+    </form>
+</div>

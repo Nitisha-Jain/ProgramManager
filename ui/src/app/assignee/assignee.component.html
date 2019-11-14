@@ -1,0 +1,43 @@
+<<<<<<< HEAD
+<div class="program-card">
+                <div *ngFor="let data of data1" class="example-card" >
+                    
+                        <div *ngFor = "let program of data.program " >
+                            <div   >
+                            <mat-card class="card" ><span>ProgramName: </span>{{program.text}}
+                                
+                                <div><span>StartDate: </span>{{program.startDate | date}}</div>
+                                 
+                                <div><span >EndDate: </span>{{program.endDate | date }}</div>
+                                <div><span >noOfParticipate: </span>{{program.noOfParticipate }}</div>
+                                
+                                   
+                            </mat-card>
+                        </div>
+                </div>
+=======
+<div >
+    <div *ngFor="let data of data1" class="example-card">
+
+        <div *ngFor="let program of data.program " class="program">
+
+            <mat-card>
+                <div class="avatar">
+                    <div>
+                        <ngx-avatar size="25" name={{program.text}} (click)="openCalendar(program.session)"></ngx-avatar>
+
+                    </div>
+                    <div style="margin-left: 1% ; margin-top:1%">
+                        {{program.text}}
+                    </div>
+>>>>>>> c13d9b68a0210ac82cc38714d27fdd302fa28707
+                </div>
+                <br>
+                <span>Start Date: </span>{{program.startDate | date}}
+
+                <div><span>End Date: </span>{{program.endDate | date }}</div>
+                <div><span>No. of Participate: </span>{{program.noOfParticipate }}</div>
+            </mat-card>
+        </div>
+</div>
+</div>
